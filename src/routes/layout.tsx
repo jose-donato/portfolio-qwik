@@ -1,5 +1,4 @@
 import { component$, Slot } from "@builder.io/qwik";
-import Header from "../components/header";
 
 export default component$(() => {
   const ROUTES = [
@@ -142,14 +141,6 @@ export default component$(() => {
       <div class="flex flex-col">
         <div class="flex gap-2">
           {ROUTES.map((route) => {
-            if (false) {
-              //route.href === window.location.pathname) {
-              return (
-                <h2 class="text-lg font-bold uppercase tracking-widest">
-                  {route.title}
-                </h2>
-              );
-            }
             return <a href={route.href}>{route.title}</a>;
           })}
         </div>
