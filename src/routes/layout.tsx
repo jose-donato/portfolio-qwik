@@ -23,7 +23,7 @@ export default component$(() => {
     },
   ];
   return (
-    <div class="mx-auto max-w-screen-md px-4 sm:px-6 md:px-8 my-12 sm:my-20 md:my-32">
+    <div class="mx-auto px-4 sm:px-6 md:px-8 my-12 sm:my-20 md:my-32">
       <header>
         <div class="flex flex-col md:flex-row items-center gap-10">
           <div class="flex md:min-w-[20%]">
