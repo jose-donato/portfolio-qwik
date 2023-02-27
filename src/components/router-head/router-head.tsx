@@ -11,6 +11,7 @@ export const RouterHead = component$(() => {
   return (
     <>
       <title>{head.title}</title>
+      <meta name="color-scheme" content="dark light" />
       <meta name="title" content="José Donato" />
       <meta
         name="description"
@@ -43,7 +44,6 @@ export const RouterHead = component$(() => {
       <meta name="robots" content="index, follow" />
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
-      <link rel="stylesheet" href="/styles/index.css" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

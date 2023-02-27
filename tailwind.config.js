@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        "sm-only": {
+          raw: "(max-width: 639px)",
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@plaiceholder/tailwindcss")],
+  darkMode: "class",
 };

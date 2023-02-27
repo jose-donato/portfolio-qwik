@@ -43,6 +43,8 @@
     "wrangler": "latest"
   },
   "dependencies": {
-    "clsx": "^1.2.1"
+    "@plaiceholder/tailwindcss": "^2.5.0",
+    "clsx": "^1.2.1",
+    "plaiceholder": "^2.5.0"
   }
 }
