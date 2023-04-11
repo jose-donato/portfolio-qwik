@@ -2,7 +2,7 @@
 @tailwind components;
 @layer components {
   ._btn {
-    @apply text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm inline-flex items-center;
+    @apply p-1 text-center text-zinc-500 dark:text-zinc-400 hover:bg-zinc-300 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:focus:ring-zinc-700 rounded-lg text-sm inline-flex items-center;
   }
 }
 @tailwind utilities;
