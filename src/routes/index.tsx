@@ -1,12 +1,9 @@
-import { component$, Resource } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
-import type { RequestHandler } from "@builder.io/qwik-city";
-import { fetchContributionsFromYear, fetchGithubStars } from "~/utils/api";
 import Calendar from "~/components/calendar";
 import BlobAvatar from "~/components/BlobAvatar";
 import { LineMdExternalLink, MdiGithub } from "~/components/icons";
 import { data } from "./test";
-import { data2 } from "./test";
 
 export default component$(() => {
   const PROJECTS = [
