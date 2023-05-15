@@ -1,4 +1,4 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import ToggleTheme from "~/components/ToggleTheme";
 
@@ -65,6 +65,9 @@ export default component$(() => {
       ),
     },
   ];
+
+
+
   return (
     <>
       <header class="top-0 z-20 sticky flex justify-center">
@@ -76,7 +79,7 @@ export default component$(() => {
               class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 border border-zinc-50/50 h-10 w-10 shadow"
             />
           </Link>
-          <nav class="hidden sm:flex gap-4 backdrop-blur backdrop-filter dark:bg-zinc-800 bg-zinc-100 rounded-lg p-1">
+          <nav class="hidden sm:flex gap-4 backdrop-blur backdrop-filter dark:bg-zinc-800 bg-zinc-100 rounded-lg p-1 border border-zinc-700">
             {ROUTES.map((route) => {
               return (
                 <Link href={route.href} class="_btn" key={route.href}>
@@ -88,10 +91,10 @@ export default component$(() => {
           <ToggleTheme />
         </div>
       </header>
-      <main class="mt-32 container mx-auto">
+      <main class="mt-32">
         <Slot />
       </main>
-      <nav class="sm-only:flex py-4 backdrop-blur backdrop-filter fixed bottom-0 w-full p-2 hidden justify-around">
+      <nav class="sm-only:flex fixed bottom-4 left-1/2 -translate-x-1/2 hidden justify-around gap-4 backdrop-blur backdrop-filter dark:bg-zinc-800 bg-zinc-100 rounded-lg p-1">
         {ROUTES.map((route) => {
           return (
             <Link
@@ -99,7 +102,6 @@ export default component$(() => {
               class="flex items-center gap-2 group"
               key={route.href}
             >
-              {route.icon}
               <span class="group-hover:underline underline-offset-4">
                 {route.title}
               </span>

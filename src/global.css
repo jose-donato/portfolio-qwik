@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @layer components {
@@ -10,6 +11,10 @@
 html,
 body {
   height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-image: radial-gradient(rgba(85, 85, 85, 0.3) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
 }
 
 .wave {
@@ -62,5 +67,33 @@ body {
     mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 0 / 400%
       no-repeat;
     opacity: 1;
+  }
+}
+
+.blob {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background-image: url("/no-bg-avatar.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -10px;
+  -webkit-animation: blob 10s linear 0s infinite;
+  animation: blob 10s linear 0s infinite;
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 70% 30% 32% 68% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 50% 50% 32% 68% / 55% 24% 76% 45%;
+  }
+  75% {
+    border-radius: 28% 72% 57% 43% / 79% 24% 76% 21%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
 }

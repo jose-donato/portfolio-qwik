@@ -23,7 +23,7 @@ export default component$(() => {
         <RouterHead />
         <DarkThemeLauncher />
       </head>
-      <body class="text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-gray-900 antialiased">
+      <body class="text-zinc-900 dark:text-slate-300 tracking-tight bg-white dark:bg-zinc-900 antialiased">
         <RouterOutlet />
         <ServiceWorkerRegister />
       </body>

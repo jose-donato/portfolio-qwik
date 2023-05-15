@@ -23,9 +23,9 @@ export function generateColor(level: number, max: number = 5) {
   // take into account opacity, if level is 0, then opacity is 0, if level is max, then opacity is 1
   // generate green colors
   const opacity = level / max;
-  const red = 0;
-  const green = 255;
-  const blue = 0;
+  const red = 190;
+  const green = 190;
+  const blue = 190;
   if (level === 0) {
     return `rgba(200, 200, 200, 0.05)`;
   }
