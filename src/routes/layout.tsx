@@ -66,15 +66,13 @@ export default component$(() => {
     },
   ];
 
-
-
   return (
     <>
       <header class="top-0 z-20 sticky flex justify-center">
         <div class="container flex items-center justify-between flex-1 px-8 py-4">
           <Link href="/">
             <img
-              src="/avatar.png"
+              src="/no-bg-avatar.webp"
               alt="personal avatar"
               class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 border border-zinc-50/50 h-10 w-10 shadow"
             />

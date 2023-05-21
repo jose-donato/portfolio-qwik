@@ -8,10 +8,19 @@
 }
 @tailwind utilities;
 
-html,
-body {
+html {
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  background: rgb(255 255 255);
+  background-image: radial-gradient(rgba(85, 85, 85, 0.3) 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+.dark {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background: rgb(24 24 27);
   background-image: radial-gradient(rgba(85, 85, 85, 0.3) 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
@@ -78,6 +87,12 @@ body {
   background-position: 0 -10px;
   -webkit-animation: blob 10s linear 0s infinite;
   animation: blob 10s linear 0s infinite;
+  image-rendering: pixelated;
+  filter: blur(1px);
+}
+
+.blob:hover {
+  filter: blur(0px);
 }
 
 @keyframes blob {
@@ -96,4 +111,10 @@ body {
   100% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
+}
+
+.btn-gradient {
+  border: 1px solid transparent;
+  background: padding-box linear-gradient(rgb(4 6 22), rgb(4 6 22)),
+    border-box linear-gradient(rgb(86 77 168), rgb(86 77 168 / 0.1));
 }

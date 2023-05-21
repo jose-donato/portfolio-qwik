@@ -1,9 +1,13 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { QwikCityProvider, RouterOutlet, ServiceWorkerRegister } from '@builder.io/qwik-city';
-import DarkThemeLauncher from './components/DarkThemeLauncher';
-import { RouterHead } from './components/router-head/router-head';
+import { component$, useStyles$ } from "@builder.io/qwik";
+import {
+  QwikCityProvider,
+  RouterOutlet,
+  ServiceWorkerRegister,
+} from "@builder.io/qwik-city";
+import DarkThemeLauncher from "./components/DarkThemeLauncher";
+import { RouterHead } from "./components/router-head/router-head";
 
-import globalStyles from './global.css?inline';
+import globalStyles from "./global.css?inline";
 
 export default component$(() => {
   /**
@@ -23,7 +27,7 @@ export default component$(() => {
         <RouterHead />
         <DarkThemeLauncher />
       </head>
-      <body class="text-zinc-900 dark:text-slate-300 tracking-tight bg-white dark:bg-zinc-900 antialiased">
+      <body class="text-zinc-900 dark:text-slate-300 tracking-tight antialiased">
         <RouterOutlet />
         <ServiceWorkerRegister />
       </body>
