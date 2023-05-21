@@ -1,7 +1,7 @@
+//@ts-nocheck
 import {
   component$,
   useSignal,
-  useTask$,
   useVisibleTask$,
 } from "@builder.io/qwik";
 import { DocumentHead } from "@builder.io/qwik-city";
@@ -55,7 +55,7 @@ export default component$(() => {
   const visibleProjects = useSignal(PROJECTS);
 
   const uniqueTags = PROJECTS.reduce((acc, project) => {
-    project.tags.forEach((tag) => {
+    project.tags.forEach((tag: string) => {
       if (!acc.includes(tag)) {
         acc.push(tag);
       }
